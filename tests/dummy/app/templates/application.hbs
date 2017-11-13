@@ -1,3 +1,28 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="uk-navbar uk-navbar-container uk-margin">
+  <div class="uk-navbar-left">
+    {{#link-to 'index' class='uk-navbar-item uk-logo'}}ember-uikit-adsy-theme{{/link-to}}
+  </div>
 
-{{outlet}}
+  <div class="uk-navbar-right">
+    <ul class="uk-navbar-nav">
+      <li><a href="#" uk-icon="github"></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="uk-grid">
+  <div class="uk-width-1-6 uk-padding">
+    <ul class="uk-nav">
+      <li>{{#link-to 'index'}}Getting started{{/link-to}}</li>
+      <li>{{#link-to 'colors'}}Colors{{/link-to}}</li>
+      <li>{{#link-to 'components'}}Components{{/link-to}}</li>
+      <li>{{#link-to 'form'}}Form{{/link-to}}</li>
+      <li>{{#link-to 'grid'}}Grid{{/link-to}}</li>
+      <li>{{#link-to 'modifiers'}}Modifiers{{/link-to}}</li>
+    </ul>
+  </div>
+
+  <div class="uk-width-5-6 uk-padding">
+    {{outlet}}
+  </div>
+</div>
