@@ -1,43 +1,34 @@
 /* eslint-env node */
 'use strict'
 
-const path = require('path')
+const Funnel = require('broccoli-funnel')
+const Merge = require('broccoli-merge-trees')
 
 module.exports = {
   name: 'ember-uikit-adsy-theme',
 
-  included() {
+  treeForPublic(tree) {
+    let firaSans = new Funnel('node_modules/typeface-fira-sans/files', {
+      include: ['*.woff', '*.woff2'],
+      destDir: '/assets/files/'
+    })
+
+    let firaMono = new Funnel('node_modules/typeface-fira-mono/files', {
+      include: ['*.woff', '*.woff2'],
+      destDir: '/assets/files/'
+    })
+
+    return new Merge([firaSans, firaMono, tree].filter(Boolean))
+  },
+
+  included(app) {
     this._super.included.apply(this, arguments)
-
-    let app
-
-    // Climb up the hierarchy of addons up to the host
-    // If the addon has the `_findHost()` method (in ember-cli >= 2.7.0) then use it
-    if (typeof this._findHost === 'function') {
-      app = this._findHost()
-    } else {
-      // Otherwise, use the copied `_findHost()` implementation
-      // https://github.com/ember-cli/ember-cli/blob/v2.15.1/lib/models/addon.js#L614-L625
-      let current = this
-      do {
-        app = current.app || app
-      } while (current.parent.parent && (current = current.parent))
-    }
-
-    this.app = app
-
-    // see: http://ember-cli.com/extending/#broccoli-build-options-for-in-repo-addons
-    app.options = app.options || {}
-
-    // Build path to Bulma's sass paths
-    let uikitPath = path.dirname(require.resolve('uikit/src/scss/uikit.scss'))
 
     app.options.sassOptions = app.options.sassOptions || {}
     app.options.sassOptions.includePaths =
       app.options.sassOptions.includePaths || []
 
-    // Import sass dependencies
-    app.options.sassOptions.includePaths.push(uikitPath)
+    app.options.sassOptions.includePaths.push('node_modules')
 
     app.import(require.resolve('uikit/dist/js/uikit.min.js'))
     app.import(require.resolve('uikit/dist/js/uikit-icons.min.js'))

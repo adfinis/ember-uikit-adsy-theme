@@ -1,5 +1,8 @@
-@import "theme/variables.scss";
+@import 'typeface-fira-sans/index';
+@import 'typeface-fira-mono/index';
 
-@import "variables-theme.scss";
-@import "mixins-theme.scss";
-@import "uikit-theme.scss";
+@import 'theme/variables';
+
+@import 'uikit/src/scss/variables-theme';
+@import 'uikit/src/scss/mixins-theme';
+@import 'uikit/src/scss/uikit-theme';
