@@ -12,7 +12,7 @@ Router.map(function() {
   })
 
   this.route('components', function() {
-    this.route('sidenav')
+    this.route('navigation')
     this.route('colors')
   })
 })

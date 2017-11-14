@@ -1,5 +1,6 @@
 {{#uk-adsy-menu as |section nav|}}
   {{#if (eq section 'side')}}
+
     {{#nav.list as |list|}}
       {{#list.item header=true}}Getting started{{/list.item}}
       {{#list.item 'getting-started.index'}}Introduction{{/list.item}}
@@ -8,10 +9,12 @@
 
     {{#nav.list as |list|}}
       {{#list.item header=true}}Components{{/list.item}}
-      {{#list.item 'components.sidenav'}}Sidenav{{/list.item}}
+      {{#list.item 'components.navigation'}}Navigation{{/list.item}}
       {{#list.item 'components.colors'}}Colors{{/list.item}}
     {{/nav.list}}
+
   {{else if (eq section 'top')}}
+
     {{#nav.left}}
       {{nav.brand 'getting-started.index'}}
     {{/nav.left}}
@@ -20,6 +23,7 @@
         ember-uikit-adsy-theme
       {{/nav.brand}}
     {{/nav.right}}
+
   {{else}}
     {{outlet}}
   {{/if}}
