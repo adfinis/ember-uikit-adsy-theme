@@ -5,7 +5,10 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon')
 
 module.exports = function(defaults) {
   let options = {
-    snippetPaths: ['tests/dummy/app/templates/snippets']
+    snippetPaths: ['tests/dummy/app/templates/snippets'],
+    fingerprint: {
+      prepend: 'https://anehx.github.io/ember-uikit-adsy-theme/'
+    }
   }
 
   let app = new EmberAddon(defaults, options)
