@@ -1,10 +1,103 @@
 <h1>Navigation</h1>
 
-<h2>Combined Menu</h2>
-{{code-snippet name='menu.hbs'}}
-
 <h2>Topnav</h2>
-{{code-snippet name='topnav.hbs'}}
+{{code-snippet name='topbar.hbs'}}
+
+<table class="uk-table uk-table-divider">
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>primary</code></td>
+      <td><code>false</code></td>
+      <td>Whether the background uses the primary color</td>
+    </tr>
+    <tr>
+      <td><code>secondary</code></td>
+      <td><code>false</code></td>
+      <td>Whether the background uses the secondary color</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2>Sidenav</h2>
-{{code-snippet name='sidenav.hbs'}}
+{{code-snippet name='sidebar.hbs'}}
+
+<table class="uk-table uk-table-divider">
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>muted</code></td>
+      <td><code>false</code></td>
+      <td>Whether the background uses the muted color</td>
+    </tr>
+    <tr>
+      <td><code>primary</code></td>
+      <td><code>false</code></td>
+      <td>Whether the background uses the primary color</td>
+    </tr>
+    <tr>
+      <td><code>secondary</code></td>
+      <td><code>false</code></td>
+      <td>Whether the background uses the secondary color</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Combined Menu</h2>
+
+<p>
+  The combined menu consists of a topbar and a navbar. Per default, the
+  topbar contains a toggler which toggles the visibility of the sidebar on
+  mobile devices. On desktop however, the sidebar is always visible.
+</p>
+
+{{code-snippet name='menu.hbs'}}
+
+<table class="uk-table uk-table-divider">
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>primaryTop</code></td>
+      <td><code>false</code></td>
+      <td>Whether the topbar background uses the primary color</td>
+    </tr>
+    <tr>
+      <td><code>secondaryTop</code></td>
+      <td><code>true</code></td>
+      <td>Whether the topbar background uses the secondary color</td>
+    </tr>
+    <tr>
+      <td><code>mutedSide</code></td>
+      <td><code>true</code></td>
+      <td>Whether the sidebar background uses the muted color</td>
+    </tr>
+    <tr>
+      <td><code>primarySide</code></td>
+      <td><code>false</code></td>
+      <td>Whether the sidebar background uses the primary color</td>
+    </tr>
+    <tr>
+      <td><code>secondarySide</code></td>
+      <td><code>false</code></td>
+      <td>Whether the sidebar background uses the secondary color</td>
+    </tr>
+  </tbody>
+</table>

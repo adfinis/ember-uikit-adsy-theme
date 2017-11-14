@@ -1,0 +1,12 @@
+{{#uk-adsy-topbar as |nav|}}
+  {{#nav.left}}
+    {{#nav.brand 'link.to.index'}}My Application{{/nav.brand}}
+  {{/nav.left}}
+
+  {{#nav.right}}
+    {{#nav.list as |list|}}
+      {{#list.item 'route1'}}Route 1{{/list.item}}
+      {{#list.item 'route2'}}Route 2{{/list.item}}
+    {{/nav.list}}
+  {{/nav.right}}
+{{/uk-adsy-topbar}}

@@ -10,6 +10,13 @@ export default Component.extend({
 
   open: false,
 
+  primaryTop: false,
+  secondaryTop: true,
+
+  mutedSide: true,
+  primarySide: false,
+  secondarySide: false,
+
   actions: {
     toggle() {
       this.toggleProperty('open')

@@ -1,17 +1,24 @@
 <div class="uk-adsy-menu-topbar">
-  {{#uk-adsy-topnav secondary=true as |nav|}}
+  {{#uk-adsy-topbar
+    primary   = primaryTop
+    secondary = secondaryTop
+  as |nav|}}
     {{yield 'top' nav}}
     {{#nav.right class='uk-hidden@l'}}
       {{nav.toggle on-click=(action 'toggle')}}
     {{/nav.right}}
-  {{/uk-adsy-topnav}}
+  {{/uk-adsy-topbar}}
 </div>
 
 <div class="uk-adsy-menu-main">
   <div class="uk-adsy-menu-sidebar">
-    {{#uk-adsy-sidenav muted=true as |nav|}}
+    {{#uk-adsy-sidebar
+      muted     = mutedSide
+      primary   = primarySide
+      secondary = secondarySide
+    as |nav|}}
       {{yield 'side' nav}}
-    {{/uk-adsy-sidenav}}
+    {{/uk-adsy-sidebar}}
   </div>
 
   <div class="uk-adsy-menu-content-overlay" {{action 'toggle'}}></div>

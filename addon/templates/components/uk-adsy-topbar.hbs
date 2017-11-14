@@ -1,0 +1,11 @@
+<div class="uk-container uk-container-expand">
+  <nav class="uk-navbar">
+    {{yield (hash
+      brand  = (component 'uk-adsy-topbar/brand')
+      toggle = (component 'uk-adsy-topbar/toggle')
+      list   = (component 'uk-adsy-topbar/list')
+      left   = (component 'uk-adsy-topbar/container' 'left')
+      right  = (component 'uk-adsy-topbar/container' 'right')
+    )}}
+  </nav>
+</div>
