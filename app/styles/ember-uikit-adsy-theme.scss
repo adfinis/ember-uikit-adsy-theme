@@ -4,9 +4,10 @@
 @import 'basic';
 
 @import 'theme/variables';
-@import 'theme/topbar';
-@import 'theme/sidebar';
 
 @import 'uikit/src/scss/variables-theme';
 @import 'uikit/src/scss/mixins-theme';
 @import 'uikit/src/scss/uikit-theme';
+
+@import 'theme/topbar';
+@import 'theme/sidebar';

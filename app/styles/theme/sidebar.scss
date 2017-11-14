@@ -1,4 +1,19 @@
 .uk-sidebar {
-  height: 100%;
   min-width: 250px;
+  padding-top: $global-medium-gutter;
+  padding-bottom: $global-medium-gutter;
+}
+
+.uk-sidebar .uk-nav li.uk-nav-header {
+  border-bottom: 1px solid $nav-default-item-color;
+  padding: 5px 0;
+  margin: 0 $global-medium-gutter;
+}
+
+.uk-sidebar .uk-nav li a {
+  padding: 5px $global-medium-gutter;
+}
+
+.uk-sidebar .uk-nav li a.active {
+  border-right: 2px solid $global-primary-background;
 }
