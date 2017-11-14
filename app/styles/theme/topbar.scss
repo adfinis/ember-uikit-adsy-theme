@@ -1,0 +1,19 @@
+.uk-navbar-container:not(.uk-navbar-transparent).uk-background-primary {
+  background: linear-gradient(
+    to left,
+    $global-primary-background,
+    darken($global-primary-background, 15%)
+  );
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent).uk-background-secondary {
+  background: linear-gradient(
+    to left,
+    $global-secondary-background,
+    darken($global-secondary-background, 15%)
+  );
+}
+
+.uk-navbar-container .uk-logo img {
+  height: 50%;
+}

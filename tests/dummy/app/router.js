@@ -7,11 +7,14 @@ const Router = EmberRouter.extend({
 })
 
 Router.map(function() {
-  this.route('colors')
-  this.route('components')
-  this.route('form')
-  this.route('grid')
-  this.route('modifiers')
+  this.route('getting-started', { path: '/' }, function() {
+    this.route('installation')
+  })
+
+  this.route('components', function() {
+    this.route('sidenav')
+    this.route('colors')
+  })
 })
 
 export default Router

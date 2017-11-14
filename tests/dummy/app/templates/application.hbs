@@ -1,28 +1,30 @@
-<nav class="uk-navbar uk-navbar-container uk-margin">
-  <div class="uk-navbar-left">
-    {{#link-to 'index' class='uk-navbar-item uk-logo'}}ember-uikit-adsy-theme{{/link-to}}
-  </div>
-
-  <div class="uk-navbar-right">
-    <ul class="uk-navbar-nav">
-      <li><a href="#" uk-icon="github"></a></li>
-    </ul>
-  </div>
-</nav>
+{{#uk-adsy-topnav primary=true as |nav|}}
+  {{#nav.left}}
+    {{nav.brand 'getting-started.index'}}
+  {{/nav.left}}
+  {{#nav.right}}
+    {{#nav.brand 'getting-started.index' logo=false}}
+      ember-uikit-adsy-theme
+    {{/nav.brand}}
+  {{/nav.right}}
+{{/uk-adsy-topnav}}
 
 <div class="uk-grid">
-  <div class="uk-width-1-6 uk-padding">
-    <ul class="uk-nav">
-      <li>{{#link-to 'index'}}Getting started{{/link-to}}</li>
-      <li>{{#link-to 'colors'}}Colors{{/link-to}}</li>
-      <li>{{#link-to 'components'}}Components{{/link-to}}</li>
-      <li>{{#link-to 'form'}}Form{{/link-to}}</li>
-      <li>{{#link-to 'grid'}}Grid{{/link-to}}</li>
-      <li>{{#link-to 'modifiers'}}Modifiers{{/link-to}}</li>
-    </ul>
-  </div>
+  {{#uk-adsy-sidenav muted=true as |nav|}}
+    {{#nav.list as |list|}}
+      {{#list.item header=true}}Getting started{{/list.item}}
+      {{#list.item 'getting-started.index'}}Introduction{{/list.item}}
+      {{#list.item 'getting-started.installation'}}Installation{{/list.item}}
+    {{/nav.list}}
 
-  <div class="uk-width-5-6 uk-padding">
+    {{#nav.list as |list|}}
+      {{#list.item header=true}}Components{{/list.item}}
+      {{#list.item 'components.sidenav'}}Sidenav{{/list.item}}
+      {{#list.item 'components.colors'}}Colors{{/list.item}}
+    {{/nav.list}}
+  {{/uk-adsy-sidenav}}
+
+  <div class="uk-padding">
     {{outlet}}
   </div>
 </div>

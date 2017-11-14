@@ -1,0 +1,23 @@
+<h1>Installation</h1>
+
+<p>
+  To use the theme you need to install it by running the following command in
+  your terminal.
+</p>
+
+<pre><code>$ ember install ember-uikit-adsy-theme</code></pre>
+
+This will install <code>uikit</code> and <code>ember-cli-sass</code>. To
+include the styles in your application you need to add the following import
+at the start of your <code>/app/styles/app.scss</code>.
+
+<pre><code>@import 'ember-uikit-adsy-theme'</code></pre>
+
+If you want to customize any of the variables, define them before importing
+the addon.
+
+<pre><code>$global-primary-background: #ff00ff;
+
+// any other variable definitions
+
+@import 'ember-uikit-adsy-theme';</code></pre>

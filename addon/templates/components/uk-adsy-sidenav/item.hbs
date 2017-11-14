@@ -1,0 +1,5 @@
+{{#if header}}
+  {{yield}}
+{{else}}
+  {{#link-to routeName}}{{yield}}{{/link-to}}
+{{/if}}

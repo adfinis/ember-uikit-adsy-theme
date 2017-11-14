@@ -1,7 +1,11 @@
 @import 'typeface-fira-sans/index';
 @import 'typeface-fira-mono/index';
 
+@import 'basic';
+
 @import 'theme/variables';
+@import 'theme/topbar';
+@import 'theme/sidebar';
 
 @import 'uikit/src/scss/variables-theme';
 @import 'uikit/src/scss/mixins-theme';
