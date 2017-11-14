@@ -18,7 +18,11 @@ module.exports = {
       destDir: '/assets/files/'
     })
 
-    return new Merge([firaSans, firaMono, tree].filter(Boolean))
+    let uikitImages = new Funnel('node_modules/uikit/src/images', {
+      destDir: '/assets/images/'
+    })
+
+    return new Merge([firaSans, firaMono, uikitImages, tree].filter(Boolean))
   },
 
   included(app) {
@@ -30,7 +34,7 @@ module.exports = {
 
     app.options.sassOptions.includePaths.push('node_modules')
 
-    app.import(require.resolve('uikit/dist/js/uikit.min.js'))
-    app.import(require.resolve('uikit/dist/js/uikit-icons.min.js'))
+    app.import('node_modules/uikit/dist/js/uikit.min.js')
+    app.import('node_modules/uikit/dist/js/uikit-icons.min.js')
   }
 }
