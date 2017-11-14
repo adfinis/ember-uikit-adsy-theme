@@ -23,6 +23,7 @@
     "broccoli-merge-trees": "^2.0.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
+    "ember-truth-helpers": "^2.0.0",
     "typeface-fira-mono": "^0.0.44",
     "typeface-fira-sans": "^0.0.44",
     "uikit": "^3.0.0-beta.34"
