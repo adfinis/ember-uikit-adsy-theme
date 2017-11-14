@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('getting-started', { path: '/' }, function() {
     this.route('installation')
+    this.route('javascript')
   })
 
   this.route('components', function() {

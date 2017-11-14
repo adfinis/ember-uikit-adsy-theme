@@ -1,0 +1,1 @@
+$ ember install ember-uikit-adsy-theme
