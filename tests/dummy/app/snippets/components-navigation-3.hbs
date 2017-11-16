@@ -1,8 +1,10 @@
 {{#uk-adsy-menu as |section nav|}}
   {{#if (eq section 'top')}}
     {{#nav.left}}
-      {{#nav.brand 'getting-started.index'}}
-        My Application
+      {{#nav.brand}}
+        {{#link-to 'link.to.index'}}
+          My Application
+        {{/link-to}}
       {{/nav.brand}}
     {{/nav.left}}
   {{else if (eq section 'side')}}

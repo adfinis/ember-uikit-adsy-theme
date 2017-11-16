@@ -1,6 +1,10 @@
 {{#uk-adsy-topbar as |nav|}}
   {{#nav.left}}
-    {{#nav.brand 'link.to.index'}}My Application{{/nav.brand}}
+    {{#nav.brand}}
+      {{#link-to 'link.to.index'}}
+        My Application
+      {{/link-to}}
+    {{/nav.brand}}
   {{/nav.left}}
 
   {{#nav.right}}

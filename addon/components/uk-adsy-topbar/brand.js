@@ -1,7 +1,7 @@
-import LinkComponent from '@ember/routing/link-component'
+import Component from '@ember/component'
 import layout from '../../templates/components/uk-adsy-topbar/brand'
 
-export default LinkComponent.extend({
+export default Component.extend({
   layout,
 
   logo: true,
