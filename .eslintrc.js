@@ -16,8 +16,6 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': 'error',
-    'ember/named-functions-in-promises': ['error', {
-      allowSimpleArrowFunction: true
-    }]
+    'ember/named-functions-in-promises': 'off'
   }
 }
