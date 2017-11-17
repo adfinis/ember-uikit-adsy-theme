@@ -1,8 +1,12 @@
 import Component from '@ember/component'
+import RecognizerMixin from 'ember-gestures/mixins/recognizers'
+import { set } from '@ember/object'
 import layout from '../templates/components/uk-adsy-menu'
 
-export default Component.extend({
+export default Component.extend(RecognizerMixin, {
   layout,
+
+  recognizers: 'swipe',
 
   classNames: ['uk-adsy-menu-wrapper'],
 
@@ -21,5 +25,13 @@ export default Component.extend({
     toggle() {
       this.toggleProperty('open')
     }
+  },
+
+  swipeRight() {
+    set(this, 'open', true)
+  },
+
+  swipeLeft() {
+    set(this, 'open', false)
   }
 })
