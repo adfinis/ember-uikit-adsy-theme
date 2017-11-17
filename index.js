@@ -3,9 +3,20 @@
 
 const Funnel = require('broccoli-funnel')
 const Merge = require('broccoli-merge-trees')
+const buildAstTransform = require('./lib/ast-transform')
 
 module.exports = {
   name: 'ember-uikit-adsy-theme',
+
+  setupPreprocessorRegistry(type, registry) {
+    registry.add('htmlbars-ast-plugin', {
+      name: 'ember-uk-adsy-theme-static-transform',
+      plugin: buildAstTransform(this),
+      baseDir() {
+        return __dirname
+      }
+    })
+  },
 
   treeForPublic(tree) {
     let firaSans = new Funnel('node_modules/typeface-fira-sans/files', {

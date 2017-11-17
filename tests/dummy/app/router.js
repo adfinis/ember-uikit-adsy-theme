@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('components', function() {
     this.route('navigation')
     this.route('colors')
+    this.route('icons')
   })
 })
 
