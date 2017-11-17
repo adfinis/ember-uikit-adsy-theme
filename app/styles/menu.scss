@@ -46,6 +46,39 @@
   transition: opacity .3s ease, transform .3s ease;
 }
 
+.uk-navbar-toggle > svg {
+  height: 70%;
+  margin-right: -40%;
+}
+
+.uk-navbar-toggle > svg > path {
+  stroke-width: 15;
+  stroke:rgba(255,255,255,0.7);
+  fill: transparent;
+  transition:
+    stroke-dasharray .5s ease-in-out,
+    stroke-dashoffset .5s ease-in-out;
+}
+
+.uk-navbar-toggle > svg > path.top-bar,
+.uk-navbar-toggle > svg > path.bottom-bar {
+  stroke-dasharray: 240px 910px;
+}
+
+.uk-navbar-toggle > svg > path.middle-bar {
+  stroke-dasharray: 240px 240px;
+}
+
+.uk-adsy-menu-wrapper-sidebar-open .uk-navbar-toggle > svg > path.top-bar,
+.uk-adsy-menu-wrapper-sidebar-open .uk-navbar-toggle > svg > path.bottom-bar {
+  stroke-dashoffset: -650px;
+}
+
+.uk-adsy-menu-wrapper-sidebar-open .uk-navbar-toggle > svg > path.middle-bar {
+  stroke-dasharray: 0px 220px;
+  stroke-dashoffset: -120px;
+}
+
 .uk-adsy-menu-wrapper-sidebar-open .uk-adsy-menu-content-overlay,
 .uk-adsy-menu-wrapper-sidebar-open .uk-adsy-menu-content {
   transform: translateX($sidebar-width);
