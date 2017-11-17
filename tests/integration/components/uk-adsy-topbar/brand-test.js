@@ -1,24 +1,24 @@
-import { moduleForComponent, test } from 'ember-qunit';
-import hbs from 'htmlbars-inline-precompile';
+import { expect } from 'chai'
+import { describe, it } from 'mocha'
+import { setupComponentTest } from 'ember-mocha'
+import hbs from 'htmlbars-inline-precompile'
 
-moduleForComponent('uk-adsy-topbar/brand', 'Integration | Component | uk adsy topbar/brand', {
-  integration: true
-});
+describe('Integration | Component | uk adsy topbar/brand', function() {
+  setupComponentTest('uk-adsy-topbar/brand', {
+    integration: true
+  })
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  it('renders', function() {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+    // Template block usage:
+    // this.render(hbs`
+    //   {{#uk-adsy-topbar/brand}}
+    //     template content
+    //   {{/uk-adsy-topbar/brand}}
+    // `);
 
-  this.render(hbs`{{uk-adsy-topbar/brand}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#uk-adsy-topbar/brand}}
-      template block text
-    {{/uk-adsy-topbar/brand}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
-});
+    this.render(hbs`{{uk-adsy-topbar/brand}}`)
+    expect(this.$()).to.have.length(1)
+  })
+})

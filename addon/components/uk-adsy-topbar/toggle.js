@@ -1,5 +1,6 @@
 import Component from '@ember/component'
 import layout from '../../templates/components/uk-adsy-topbar/toggle'
+import { getWithDefault } from '@ember/object'
 
 export default Component.extend({
   layout,
@@ -15,6 +16,6 @@ export default Component.extend({
   click(e) {
     e.preventDefault()
 
-    this.getWithDefault('on-click', () => {})()
+    getWithDefault(this, 'on-click', () => {})()
   }
 })

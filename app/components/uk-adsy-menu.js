@@ -1,1 +1,1 @@
-export { default } from 'ember-uikit-adsy-theme/components/uk-adsy-menu';
+export { default } from 'ember-uikit-adsy-theme/components/uk-adsy-menu'

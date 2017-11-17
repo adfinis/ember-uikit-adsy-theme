@@ -1,6 +1,7 @@
 import Component from '@ember/component'
 import { computed } from '@ember/object'
 import layout from '../../templates/components/uk-adsy-topbar/container'
+import { get } from '@ember/object'
 
 const UkAdsyTopbarContainerComponent = Component.extend({
   layout,
@@ -10,7 +11,7 @@ const UkAdsyTopbarContainerComponent = Component.extend({
   classNameBindings: ['containerClass'],
 
   containerClass: computed('align', function() {
-    return `uk-navbar-${this.get('align')}`
+    return `uk-navbar-${get(this, 'align')}`
   })
 })
 

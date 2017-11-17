@@ -1,1 +1,3 @@
-export { default } from 'ember-uikit-adsy-theme/components/uk-adsy-topbar/container';
+export {
+  default
+} from 'ember-uikit-adsy-theme/components/uk-adsy-topbar/container'
