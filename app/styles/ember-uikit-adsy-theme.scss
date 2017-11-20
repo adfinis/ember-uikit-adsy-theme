@@ -15,9 +15,7 @@ $base-body-font-weight: 300;
 $base-heading-font-weight: 300;
 $sidebar-width: 250px;
 
-@import 'uikit/src/scss/variables-theme';
-@import 'uikit/src/scss/mixins-theme';
-@import 'uikit/src/scss/uikit-theme';
+@import 'ember-uikit';
 
 @import 'theme/topbar';
 @import 'theme/sidebar';
