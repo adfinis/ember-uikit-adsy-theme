@@ -1,6 +1,6 @@
 import Component from '@ember/component'
 import RecognizerMixin from 'ember-gestures/mixins/recognizers'
-import EmberObject, { set } from '@ember/object'
+import { set } from '@ember/object'
 import layout from '../templates/components/uk-adsy-menu'
 
 export default Component.extend(RecognizerMixin, {
@@ -21,11 +21,20 @@ export default Component.extend(RecognizerMixin, {
   primarySide: false,
   secondarySide: false,
 
-  managerOptions: EmberObject.create({
-    cssProps: EmberObject.create({
-      userSelect: true
+  init() {
+    this._super(...arguments)
+
+    set(this, 'managerOptions', {
+      domEvents: true,
+      cssProps: {
+        contentZooming: 'none',
+        tapHighlightColor: 'rgba(0,0,0,0)',
+        touchCallout: 'none',
+        userDrag: 'none',
+        userSelect: true
+      }
     })
-  }),
+  },
 
   actions: {
     toggle() {
