@@ -1,7 +1,7 @@
 /* eslint-env node */
-'use strict'
+'use strict';
 
-const EmberAddon = require('ember-cli/lib/broccoli/ember-addon')
+const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   let options = {
@@ -11,15 +11,15 @@ module.exports = function(defaults) {
     },
     includeHighlightJS: false,
     includeHighlightStyles: false
-  }
+  };
 
-  let app = new EmberAddon(defaults, options)
+  let app = new EmberAddon(defaults, options);
 
   app.import('vendor/highlight.pack.js', {
     using: [{ transformation: 'amd', as: 'highlight.js' }]
-  })
+  });
 
-  app.import('vendor/atom-one-light.css')
+  app.import('vendor/atom-one-light.css');
 
-  return app.toTree()
-}
+  return app.toTree();
+};

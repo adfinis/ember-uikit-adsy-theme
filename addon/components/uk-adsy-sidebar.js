@@ -1,5 +1,5 @@
-import Component from '@ember/component'
-import layout from '../templates/components/uk-adsy-sidebar'
+import Component from '@ember/component';
+import layout from '../templates/components/uk-adsy-sidebar';
 
 export default Component.extend({
   layout,
@@ -21,4 +21,4 @@ export default Component.extend({
   primary: false,
 
   secondary: false
-})
+});

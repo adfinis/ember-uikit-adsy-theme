@@ -1,1 +1,3 @@
-export { default } from 'ember-uikit-adsy-theme/components/uk-adsy-topbar/brand'
+export {
+  default
+} from 'ember-uikit-adsy-theme/components/uk-adsy-topbar/brand';

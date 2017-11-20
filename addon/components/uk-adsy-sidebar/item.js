@@ -1,5 +1,5 @@
-import Component from '@ember/component'
-import layout from '../../templates/components/uk-adsy-sidebar/item'
+import Component from '@ember/component';
+import layout from '../../templates/components/uk-adsy-sidebar/item';
 
 const UkAdsySidebarItemComponent = Component.extend({
   layout,
@@ -9,10 +9,10 @@ const UkAdsySidebarItemComponent = Component.extend({
   classNameBindings: ['header:uk-nav-header'],
 
   header: false
-})
+});
 
 UkAdsySidebarItemComponent.reopenClass({
   positionalParams: ['routeName']
-})
+});
 
-export default UkAdsySidebarItemComponent
+export default UkAdsySidebarItemComponent;

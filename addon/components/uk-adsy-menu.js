@@ -1,7 +1,7 @@
-import Component from '@ember/component'
-import RecognizerMixin from 'ember-gestures/mixins/recognizers'
-import { set } from '@ember/object'
-import layout from '../templates/components/uk-adsy-menu'
+import Component from '@ember/component';
+import RecognizerMixin from 'ember-gestures/mixins/recognizers';
+import { set } from '@ember/object';
+import layout from '../templates/components/uk-adsy-menu';
 
 export default Component.extend(RecognizerMixin, {
   layout,
@@ -22,7 +22,7 @@ export default Component.extend(RecognizerMixin, {
   secondarySide: false,
 
   init() {
-    this._super(...arguments)
+    this._super(...arguments);
 
     set(this, 'managerOptions', {
       domEvents: true,
@@ -33,20 +33,20 @@ export default Component.extend(RecognizerMixin, {
         userDrag: 'none',
         userSelect: true
       }
-    })
+    });
   },
 
   actions: {
     toggle() {
-      this.toggleProperty('open')
+      this.toggleProperty('open');
     }
   },
 
   swipeRight() {
-    set(this, 'open', true)
+    set(this, 'open', true);
   },
 
   swipeLeft() {
-    set(this, 'open', false)
+    set(this, 'open', false);
   }
-})
+});

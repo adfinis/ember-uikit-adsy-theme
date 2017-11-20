@@ -1,12 +1,12 @@
-import { expect } from 'chai'
-import { describe, it } from 'mocha'
-import { setupComponentTest } from 'ember-mocha'
-import hbs from 'htmlbars-inline-precompile'
+import { expect } from 'chai';
+import { describe, it } from 'mocha';
+import { setupComponentTest } from 'ember-mocha';
+import hbs from 'htmlbars-inline-precompile';
 
 describe('Integration | Component | uk adsy sidebar', function() {
   setupComponentTest('uk-adsy-sidebar', {
     integration: true
-  })
+  });
 
   it('renders', function() {
     // Set any properties with this.set('myProperty', 'value');
@@ -18,7 +18,7 @@ describe('Integration | Component | uk adsy sidebar', function() {
     //   {{/uk-adsy-sidebar}}
     // `);
 
-    this.render(hbs`{{uk-adsy-sidebar}}`)
-    expect(this.$()).to.have.length(1)
-  })
-})
+    this.render(hbs`{{uk-adsy-sidebar}}`);
+    expect(this.$()).to.have.length(1);
+  });
+});
