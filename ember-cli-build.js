@@ -4,16 +4,14 @@
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
-  let options = {
-    snippetPaths: ['tests/dummy/app/snippets'],
+  let app = new EmberAddon(defaults, {
     fingerprint: {
       prepend: 'https://anehx.github.io/ember-uikit-adsy-theme/'
     },
+    snippetPaths: ['tests/dummy/app/snippets'],
     includeHighlightJS: false,
     includeHighlightStyles: false
-  };
-
-  let app = new EmberAddon(defaults, options);
+  });
 
   app.import('vendor/highlight.pack.js', {
     using: [{ transformation: 'amd', as: 'highlight.js' }]
