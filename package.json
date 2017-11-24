@@ -63,6 +63,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "https://anehx.github.io/ember-uikit-adsy-theme"
+    "demoURL": "https://adfinis-sygroup.github.io/ember-uikit-adsy-theme"
   }
 }

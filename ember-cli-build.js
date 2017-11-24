@@ -1,23 +1,23 @@
 /* eslint-env node */
-'use strict';
+'use strict'
 
-const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+const EmberAddon = require('ember-cli/lib/broccoli/ember-addon')
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
     fingerprint: {
-      prepend: 'https://anehx.github.io/ember-uikit-adsy-theme/'
+      prepend: 'https://adfinis-sygroup.github.io/ember-uikit-adsy-theme/'
     },
     snippetPaths: ['tests/dummy/app/snippets'],
     includeHighlightJS: false,
     includeHighlightStyles: false
-  });
+  })
 
   app.import('vendor/highlight.pack.js', {
     using: [{ transformation: 'amd', as: 'highlight.js' }]
-  });
+  })
 
-  app.import('vendor/atom-one-light.css');
+  app.import('vendor/atom-one-light.css')
 
-  return app.toTree();
-};
+  return app.toTree()
+}
