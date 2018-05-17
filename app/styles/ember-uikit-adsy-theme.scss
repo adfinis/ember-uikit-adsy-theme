@@ -1,5 +1,5 @@
-@import 'typeface-fira-sans/index';
-@import 'typeface-fira-mono/index';
+@import 'typeface-source-sans-pro/index';
+@import 'typeface-source-code-pro/index';
 
 $adsy-color-blue: rgb(91,142,219);
 $adsy-color-grey-1: rgb(162,155,150);
@@ -8,8 +8,8 @@ $adsy-color-grey-2: rgb(134,127,124);
 $global-primary-background: $adsy-color-blue;
 $global-secondary-background: rgb(87,87,87);
 
-$global-font-family: 'Fira Sans', sans-serif;
-$base-code-font-family: 'Fira Code', monospace;
+$global-font-family: 'Source Sans Pro', sans-serif;
+$base-code-font-family: 'Source Code Pro', monospace;
 
 $base-body-font-weight: 300;
 $base-heading-font-weight: 300;
