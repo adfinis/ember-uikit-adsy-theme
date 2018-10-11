@@ -11,7 +11,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "adfinis-sygroup/ember-uikit-adsy-theme",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
