@@ -1,23 +1,23 @@
-@import 'typeface-source-sans-pro/index';
-@import 'typeface-source-code-pro/index';
+@import "node_modules/typeface-source-sans-pro/index";
+@import "node_modules/typeface-source-code-pro/index";
 
-$adsy-color-blue: rgb(91,142,219);
-$adsy-color-grey-1: rgb(162,155,150);
-$adsy-color-grey-2: rgb(134,127,124);
+$adsy-color-blue: rgb(91, 142, 219) !default;
+$adsy-color-grey-1: rgb(162, 155, 150) !default;
+$adsy-color-grey-2: rgb(134, 127, 124) !default;
 
-$global-primary-background: $adsy-color-blue;
-$global-secondary-background: rgb(87,87,87);
+$global-primary-background: $adsy-color-blue !default;
+$global-secondary-background: rgb(87, 87, 87) !default;
 
-$global-font-family: 'Source Sans Pro', sans-serif;
-$base-code-font-family: 'Source Code Pro', monospace;
+$global-font-family: "Source Sans Pro", sans-serif !default;
+$base-code-font-family: "Source Code Pro", monospace !default;
 
-$base-body-font-weight: 300;
-$base-heading-font-weight: 300;
-$sidebar-width: 250px;
+$base-body-font-weight: 300 !default;
+$base-heading-font-weight: 300 !default;
+$sidebar-width: 250px !default;
 
-@import 'ember-uikit';
+@import "ember-uikit";
 
-@import 'theme/topbar';
-@import 'theme/sidebar';
+@import "theme/topbar";
+@import "theme/sidebar";
 
-@import 'menu';
+@import "menu";

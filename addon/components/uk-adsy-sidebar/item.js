@@ -1,18 +1,18 @@
-import Component from '@ember/component';
-import layout from '../../templates/components/uk-adsy-sidebar/item';
+import Component from "@ember/component";
+import layout from "../../templates/components/uk-adsy-sidebar/item";
 
 const UkAdsySidebarItemComponent = Component.extend({
   layout,
 
-  tagName: 'li',
+  tagName: "li",
 
-  classNameBindings: ['header:uk-nav-header'],
+  classNameBindings: ["header:uk-nav-header"],
 
   header: false
 });
 
 UkAdsySidebarItemComponent.reopenClass({
-  positionalParams: ['routeName']
+  positionalParams: ["routeName"]
 });
 
 export default UkAdsySidebarItemComponent;

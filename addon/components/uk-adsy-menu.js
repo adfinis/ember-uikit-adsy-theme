@@ -1,16 +1,16 @@
-import Component from '@ember/component';
-import RecognizerMixin from 'ember-gestures/mixins/recognizers';
-import { set } from '@ember/object';
-import layout from '../templates/components/uk-adsy-menu';
+import Component from "@ember/component";
+import RecognizerMixin from "ember-gestures/mixins/recognizers";
+import { set } from "@ember/object";
+import layout from "../templates/components/uk-adsy-menu";
 
 export default Component.extend(RecognizerMixin, {
   layout,
 
-  recognizers: 'swipe',
+  recognizers: "swipe",
 
-  classNames: ['uk-adsy-menu-wrapper'],
+  classNames: ["uk-adsy-menu-wrapper"],
 
-  classNameBindings: ['open:uk-adsy-menu-wrapper-sidebar-open'],
+  classNameBindings: ["open:uk-adsy-menu-wrapper-sidebar-open"],
 
   open: false,
 
@@ -24,13 +24,13 @@ export default Component.extend(RecognizerMixin, {
   init() {
     this._super(...arguments);
 
-    set(this, 'managerOptions', {
+    set(this, "managerOptions", {
       domEvents: true,
       cssProps: {
-        contentZooming: 'none',
-        tapHighlightColor: 'rgba(0,0,0,0)',
-        touchCallout: 'none',
-        userDrag: 'none',
+        contentZooming: "none",
+        tapHighlightColor: "rgba(0,0,0,0)",
+        touchCallout: "none",
+        userDrag: "none",
         userSelect: true
       }
     });
@@ -38,15 +38,15 @@ export default Component.extend(RecognizerMixin, {
 
   actions: {
     toggle() {
-      this.toggleProperty('open');
+      this.toggleProperty("open");
     }
   },
 
   swipeRight() {
-    set(this, 'open', true);
+    set(this, "open", true);
   },
 
   swipeLeft() {
-    set(this, 'open', false);
+    set(this, "open", false);
   }
 });

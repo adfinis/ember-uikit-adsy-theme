@@ -2,25 +2,25 @@
 
 This README outlines the details of collaborating on this Ember addon.
 
+## Compatibility
+
+- Ember.js v2.18 or above
+- Ember CLI v2.13 or above
+
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-uikit-adsy-theme`
-* `yarn install`
+```
+ember install my-addon
+```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+[Longer description of how to use the addon in apps.]
 
-## Running Tests
+## Contributing
 
-* `yarn test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
-## Building
+## License
 
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+This project is licensed under the [MIT License](LICENSE.md).

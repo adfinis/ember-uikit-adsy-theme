@@ -1,24 +1,26 @@
-import { expect } from 'chai';
-import { describe, it } from 'mocha';
-import { setupComponentTest } from 'ember-mocha';
-import hbs from 'htmlbars-inline-precompile';
+import { module, test } from "qunit";
+import { setupRenderingTest } from "ember-qunit";
+import { render } from "@ember/test-helpers";
+import hbs from "htmlbars-inline-precompile";
 
-describe('Integration | Component | uk adsy menu', function() {
-  setupComponentTest('uk-adsy-menu', {
-    integration: true
-  });
+module("Integration | Component | uk-adsy-menu", function(hooks) {
+  setupRenderingTest(hooks);
 
-  it('renders', function() {
+  test("it renders", async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
-    // Template block usage:
-    // this.render(hbs`
-    //   {{#uk-adsy-menu}}
-    //     template content
-    //   {{/uk-adsy-menu}}
-    // `);
+    // Handle any actions with this.set('myAction', function(val) { ... });
 
-    this.render(hbs`{{uk-adsy-menu}}`);
-    expect(this.$()).to.have.length(1);
+    await render(hbs`{{uk-adsy-menu}}`);
+
+    assert.dom(this.element).hasText("");
+
+    // Template block usage:
+    await render(hbs`
+      {{#uk-adsy-menu}}
+        template block text
+      {{/uk-adsy-menu}}
+    `);
+
+    assert.dom(this.element).containsText("template block text");
   });
 });
