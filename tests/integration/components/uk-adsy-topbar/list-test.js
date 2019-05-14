@@ -1,24 +1,26 @@
-import { expect } from 'chai';
-import { describe, it } from 'mocha';
-import { setupComponentTest } from 'ember-mocha';
-import hbs from 'htmlbars-inline-precompile';
+import { module, test } from "qunit";
+import { setupRenderingTest } from "ember-qunit";
+import { render } from "@ember/test-helpers";
+import hbs from "htmlbars-inline-precompile";
 
-describe('Integration | Component | uk adsy topbar/list', function() {
-  setupComponentTest('uk-adsy-topbar/list', {
-    integration: true
-  });
+module("Integration | Component | uk-adsy-topbar/list", function(hooks) {
+  setupRenderingTest(hooks);
 
-  it('renders', function() {
+  test("it renders", async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
-    // Template block usage:
-    // this.render(hbs`
-    //   {{#uk-adsy-topbar/list}}
-    //     template content
-    //   {{/uk-adsy-topbar/list}}
-    // `);
+    // Handle any actions with this.set('myAction', function(val) { ... });
 
-    this.render(hbs`{{uk-adsy-topbar/list}}`);
-    expect(this.$()).to.have.length(1);
+    await render(hbs`{{uk-adsy-topbar/list}}`);
+
+    assert.dom(this.element).hasText("");
+
+    // Template block usage:
+    await render(hbs`
+      {{#uk-adsy-topbar/list}}
+        template block text
+      {{/uk-adsy-topbar/list}}
+    `);
+
+    assert.dom(this.element).hasText("template block text");
   });
 });

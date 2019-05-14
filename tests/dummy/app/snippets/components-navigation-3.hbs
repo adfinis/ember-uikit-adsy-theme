@@ -1,17 +1,17 @@
 {{#uk-adsy-menu as |section nav|}}
-  {{#if (eq section 'top')}}
+  {{#if (eq section "top")}}
     {{#nav.left}}
       {{#nav.brand}}
-        {{#link-to 'link.to.index'}}
+        {{#link-to "link.to.index"}}
           My Application
         {{/link-to}}
       {{/nav.brand}}
     {{/nav.left}}
-  {{else if (eq section 'side')}}
+  {{else if (eq section "side")}}
     {{#nav.list as |list|}}
       {{#list.item header=true}}Title{{/list.item}}
-      {{#list.item 'index'}}Index{{/list.item}}
-      {{#list.item 'other-page'}}Other Page{{/list.item}}
+      {{#list.item "index"}}Index{{/list.item}}
+      {{#list.item "other-page"}}Other Page{{/list.item}}
     {{/nav.list}}
   {{else}}
     {{outlet}}

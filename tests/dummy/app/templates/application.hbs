@@ -1,32 +1,31 @@
 {{#uk-adsy-menu as |section nav|}}
-  {{#if (eq section 'side')}}
+  {{#if (eq section "side")}}
 
     {{#nav.list as |list|}}
       {{#list.item header=true}}Getting started{{/list.item}}
-      {{#list.item 'getting-started.index'}}Introduction{{/list.item}}
-      {{#list.item 'getting-started.installation'}}Installation{{/list.item}}
-      {{#list.item 'getting-started.javascript'}}Javascript{{/list.item}}
+      {{#list.item "getting-started.index"}}Introduction{{/list.item}}
+      {{#list.item "getting-started.installation"}}Installation{{/list.item}}
+      {{#list.item "getting-started.javascript"}}Javascript{{/list.item}}
     {{/nav.list}}
 
     {{#nav.list as |list|}}
       {{#list.item header=true}}Components{{/list.item}}
-      {{#list.item 'components.navigation'}}Navigation{{/list.item}}
-      {{#list.item 'components.colors'}}Colors{{/list.item}}
+      {{#list.item "components.navigation"}}Navigation{{/list.item}}
+      {{#list.item "components.colors"}}Colors{{/list.item}}
     {{/nav.list}}
 
-  {{else if (eq section 'top')}}
+  {{else if (eq section "top")}}
 
     {{#nav.left}}
-      {{nav.brand 'getting-started.index'}}
+      {{nav.brand "getting-started.index"}}
     {{/nav.left}}
-    {{#nav.right class='uk-visible@l'}}
+    {{#nav.right class="uk-visible@l"}}
       {{#nav.brand logo=false}}
         <a href="https://github.com/adfinis-sygroup/ember-uikit-adsy-theme" class="uk-link-reset">
           <span uk-icon="github"></span>&nbsp;ember-uikit-adsy-theme
         </a>
       {{/nav.brand}}
     {{/nav.right}}
-
   {{else}}
     {{outlet}}
   {{/if}}

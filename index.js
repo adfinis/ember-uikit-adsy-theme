@@ -1,23 +1,27 @@
 /* eslint-env node */
-'use strict';
+"use strict";
 
-const Funnel = require('broccoli-funnel');
-const Merge = require('broccoli-merge-trees');
+const funnel = require("broccoli-funnel");
+const Merge = require("broccoli-merge-trees");
 
 module.exports = {
-  name: 'ember-uikit-adsy-theme',
+  name: require("./package").name,
+
+  included() {
+    this._super.included.apply(this, arguments);
+  },
 
   treeForPublic(tree) {
-    let firaSans = new Funnel('node_modules/typeface-source-sans-pro/files', {
-      include: ['*.woff', '*.woff2'],
-      destDir: '/assets/files/'
+    let sourceSansPro = funnel("node_modules/typeface-source-sans-pro/files", {
+      include: ["*.woff", "*.woff2"],
+      destDir: "/assets/files/"
     });
 
-    let firaMono = new Funnel('node_modules/typeface-source-code-pro/files', {
-      include: ['*.woff', '*.woff2'],
-      destDir: '/assets/files/'
+    let sourceCodePro = funnel("node_modules/typeface-source-code-pro/files", {
+      include: ["*.woff", "*.woff2"],
+      destDir: "/assets/files/"
     });
 
-    return new Merge([firaSans, firaMono, tree].filter(Boolean));
+    return new Merge([sourceSansPro, sourceCodePro, tree].filter(Boolean));
   }
 };
