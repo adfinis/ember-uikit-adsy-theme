@@ -57,6 +57,11 @@ jobs:
     - env: EMBER_TRY_SCENARIO=ember-canary
     - env: EMBER_TRY_SCENARIO=ember-default-with-jquery
 
+    - stage: "Deploy"
+      script: yarn deploy production
+      env: []
+      if: tag IS present
+
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
