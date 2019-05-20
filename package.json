@@ -35,6 +35,7 @@
     "typeface-source-sans-pro": "^0.0.54"
   },
   "devDependencies": {
+    "@adfinis-sygroup/semantic-release-config": "^2.1.0",
     "@ember/optional-features": "^0.7.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.10.0",
@@ -64,6 +65,7 @@
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-prettier": "2.6.0",
+    "husky": "^2.3.0",
     "loader.js": "^4.7.0",
     "prettier": "^1.8.2",
     "qunit-dom": "^0.8.4",
@@ -75,5 +77,18 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "demoURL": "https://adfinis-sygroup.github.io/ember-uikit-adsy-theme"
+  },
+  "release": {
+    "extends": "@adfinis-sygroup/semantic-release-config"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
