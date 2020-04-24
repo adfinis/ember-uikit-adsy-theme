@@ -6,5 +6,5 @@ export default Component.extend({
 
   tagName: "ul",
 
-  classNames: ["uk-navbar-nav"]
+  classNames: ["uk-navbar-nav"],
 });

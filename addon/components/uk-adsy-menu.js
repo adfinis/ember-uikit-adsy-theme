@@ -31,15 +31,15 @@ export default Component.extend(RecognizerMixin, {
         tapHighlightColor: "rgba(0,0,0,0)",
         touchCallout: "none",
         userDrag: "none",
-        userSelect: true
-      }
+        userSelect: true,
+      },
     });
   },
 
   actions: {
     toggle() {
       this.toggleProperty("open");
-    }
+    },
   },
 
   swipeRight() {
@@ -48,5 +48,5 @@ export default Component.extend(RecognizerMixin, {
 
   swipeLeft() {
     set(this, "open", false);
-  }
+  },
 });

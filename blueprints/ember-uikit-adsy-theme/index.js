@@ -27,8 +27,8 @@ module.exports = {
     return this.addAddonsToProject({
       packages: [
         { name: "ember-cli-sass", target: "latest" },
-        { name: "ember-uikit", target: "latest" }
-      ]
+        { name: "ember-uikit", target: "latest" },
+      ],
     });
-  }
+  },
 };

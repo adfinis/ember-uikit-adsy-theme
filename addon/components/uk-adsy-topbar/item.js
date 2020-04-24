@@ -4,11 +4,11 @@ import layout from "../../templates/components/uk-adsy-topbar/item";
 const UkTopbarItemComponent = Component.extend({
   layout,
 
-  tagName: "li"
+  tagName: "li",
 });
 
 UkTopbarItemComponent.reopenClass({
-  positionalParams: ["routeName"]
+  positionalParams: ["routeName"],
 });
 
 export default UkTopbarItemComponent;
