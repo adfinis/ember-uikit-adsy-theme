@@ -1,26 +1,38 @@
-# ember-uikit-adsy-theme
+ember-uikit-adsy-theme
+==============================================================================
 
 This README outlines the details of collaborating on this Ember addon.
 
-## Compatibility
 
-- Ember.js v3.4 or above
-- Ember CLI v2.13 or above
+Compatibility
+------------------------------------------------------------------------------
 
-## Installation
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+
+Installation
+------------------------------------------------------------------------------
 
 ```
-ember install my-addon
+ember install ember-uikit-adsy-theme
 ```
 
-## Usage
+
+Usage
+------------------------------------------------------------------------------
 
 [Longer description of how to use the addon in apps.]
 
-## Contributing
+
+Contributing
+------------------------------------------------------------------------------
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
-## License
+
+License
+------------------------------------------------------------------------------
 
 This project is licensed under the [MIT License](LICENSE.md).
