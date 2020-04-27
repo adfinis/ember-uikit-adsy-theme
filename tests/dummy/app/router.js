@@ -3,16 +3,16 @@ import config from "./config/environment";
 
 const Router = EmberRouter.extend({
   location: config.locationType,
-  rootURL: config.rootURL
+  rootURL: config.rootURL,
 });
 
-Router.map(function() {
-  this.route("getting-started", { path: "/" }, function() {
+Router.map(function () {
+  this.route("getting-started", { path: "/" }, function () {
     this.route("installation");
     this.route("javascript");
   });
 
-  this.route("components", function() {
+  this.route("components", function () {
     this.route("navigation");
     this.route("colors");
   });

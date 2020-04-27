@@ -8,11 +8,11 @@ const UkAdsySidebarItemComponent = Component.extend({
 
   classNameBindings: ["header:uk-nav-header"],
 
-  header: false
+  header: false,
 });
 
 UkAdsySidebarItemComponent.reopenClass({
-  positionalParams: ["routeName"]
+  positionalParams: ["routeName"],
 });
 
 export default UkAdsySidebarItemComponent;

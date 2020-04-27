@@ -14,14 +14,14 @@ module.exports = {
   treeForPublic(tree) {
     let sourceSansPro = funnel("node_modules/typeface-source-sans-pro/files", {
       include: ["*.woff", "*.woff2"],
-      destDir: "/assets/files/"
+      destDir: "/assets/files/",
     });
 
     let sourceCodePro = funnel("node_modules/typeface-source-code-pro/files", {
       include: ["*.woff", "*.woff2"],
-      destDir: "/assets/files/"
+      destDir: "/assets/files/",
     });
 
     return new Merge([sourceSansPro, sourceCodePro, tree].filter(Boolean));
-  }
+  },
 };

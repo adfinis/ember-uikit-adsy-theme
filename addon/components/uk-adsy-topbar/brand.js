@@ -6,5 +6,5 @@ export default Component.extend({
 
   logo: true,
 
-  classNames: ["uk-navbar-item", "uk-logo"]
+  classNames: ["uk-navbar-item", "uk-logo"],
 });

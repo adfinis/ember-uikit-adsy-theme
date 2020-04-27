@@ -13,12 +13,12 @@ export default Component.extend({
     "primary:uk-background-primary",
     "primary:uk-light",
     "secondary:uk-background-secondary",
-    "secondary:uk-light"
+    "secondary:uk-light",
   ],
 
   muted: false,
 
   primary: false,
 
-  secondary: false
+  secondary: false,
 });
